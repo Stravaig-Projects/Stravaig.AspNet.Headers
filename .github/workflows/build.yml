@@ -1,4 +1,4 @@
-name: Stravaig PROJECT NAME HERE
+name: Stravaig ASP.NET Headers
 on: 
   push:
     branches: 
@@ -38,9 +38,9 @@ jobs:
     name: Build, Test, and Release
     runs-on: ubuntu-latest
     env:
-      STRAVAIG_SOLUTION: src/XXXX.sln
-      STRAVAIG_TESTS: XXXX.Tests
-      STRAVAIG_PROJECT: XXXX
+      STRAVAIG_SOLUTION: src/Straviag.AspNet.Headers.sln
+      STRAVAIG_TESTS: Straviag.AspNet.Headers.Tests
+      STRAVAIG_PROJECT: Straviag.AspNet.Headers
     
     steps:
       - name: Check out code
@@ -68,7 +68,7 @@ jobs:
       - uses: actions/setup-dotnet@v1
         name: Setup .NET Core
         with:
-          dotnet-version: 3.1.x 
+          dotnet-version: 5.0.x 
 
       - name: Build Solution
         run: dotnet build $STRAVAIG_SOLUTION --configuration Release
